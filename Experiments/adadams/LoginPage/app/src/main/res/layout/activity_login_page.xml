@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".LoginPage">
+
+    <TextView
+        android:id="@+id/login_page_username_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/arapey"
+        android:text="Username:"
+        android:textSize="34sp"
+        app:layout_constraintBottom_toTopOf="@+id/login_page_password_text"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.228"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.671" />
+
+    <TextView
+        android:id="@+id/login_page_password_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="33dp"
+        android:layout_marginBottom="148dp"
+        android:fontFamily="@font/arapey"
+        android:text="Password:"
+        android:textSize="34sp"
+        app:layout_constraintBottom_toTopOf="@+id/login_page_back_to_home_button"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.218"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textInputLayout3"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <Button
+        android:id="@+id/login_page_back_to_home_button"
+        style="@style/Widget.AppCompat.Button.Colored"
+        android:layout_width="201dp"
+        android:layout_height="71dp"
+        android:layout_marginBottom="48dp"
+        android:background="@color/teal_700"
+        android:backgroundTint="@color/teal_700"
+        android:text="Back to home"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/textInputLayout3"
+        android:layout_width="409dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="@+id/login_page_password_text"
+        app:layout_constraintTop_toTopOf="@+id/login_page_username_text"
+        tools:layout_editor_absoluteX="1dp">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/login_page_username_input_box"
+            android:layout_width="453dp"
+            android:layout_height="match_parent"
+            android:hint="hint: What is my name?" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="409dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toTopOf="@+id/login_page_login_button"
+        app:layout_constraintTop_toBottomOf="@+id/login_page_password_text"
+        tools:layout_editor_absoluteX="1dp">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/login_page_password_input_box"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:hint="hint: What dries as it gets wetter?"
+            tools:layout_conversion_absoluteHeight="56dp"
+            tools:layout_conversion_absoluteWidth="409dp"
+            tools:layout_editor_absoluteX="1dp"
+            tools:layout_editor_absoluteY="504dp" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <TextView
+        android:id="@+id/login_page_welcome_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/arapey"
+        android:text="Welcome."
+        android:textSize="60sp"
+        app:layout_constraintBottom_toTopOf="@+id/textInputLayout3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.211"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.372" />
+
+    <Button
+        android:id="@+id/login_page_login_button"
+        android:layout_width="396dp"
+        android:layout_height="46dp"
+        android:layout_marginBottom="8dp"
+        android:text="Log In"
+        app:layout_constraintBottom_toTopOf="@+id/login_page_back_to_home_button"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/login_page_password_input_box" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

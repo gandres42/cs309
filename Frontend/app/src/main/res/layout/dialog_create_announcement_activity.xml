@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="350dp"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/nav_view_announcement"
+            android:layout_width="175dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/maroon_box_border"
+            android:gravity="center"
+            android:text="Announcements"
+            android:textColor="@color/gold"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/nav_view_meeting"
+            android:layout_width="175dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/maroon_box_border"
+            android:gravity="center"
+            android:text="Meetings"
+            android:textColor="@color/gold"
+            android:textSize="18sp" />
+
+    </LinearLayout>
+
+        <EditText
+            android:id="@+id/edit_announcement_header"
+            android:layout_width="262dp"
+            android:layout_height="43dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginLeft="16dp"
+            android:ems="10"
+            android:hint="Announcement Header"
+            android:inputType="textPersonName" />
+
+        <EditText
+            android:id="@+id/edit_date"
+            android:layout_width="262dp"
+            android:layout_height="1dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginLeft="16dp"
+            android:ems="10"
+            android:text="a"
+            android:hint="mm/dd/yyyy"
+            android:visibility="invisible"
+            android:inputType="date" />
+
+        <EditText
+            android:id="@+id/edit_announcement"
+            android:layout_width="320dp"
+            android:layout_height="116dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginLeft="16dp"
+            android:background="@drawable/text_box_border"
+            android:gravity="top|left"
+            android:hint="Announcement:"
+            android:inputType="textMultiLine"
+            android:lines="6"
+            android:overScrollMode="always"
+            android:scrollbarStyle="insideInset"
+            android:scrollbars="vertical"
+            android:scrollHorizontally="false"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+
+        <Button
+            android:id="@+id/create_announcement_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:backgroundTint="@color/maroon"
+            android:text="Sumbit Announcement"
+            android:textColor="@color/gold" />
+
+        <EditText
+            android:id="@+id/edit_date_example"
+            android:layout_width="262dp"
+            android:layout_height="1dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginLeft="16dp"
+            android:visibility="invisible"
+            android:inputType="date" />
+
+    </LinearLayout>
+
+</RelativeLayout>

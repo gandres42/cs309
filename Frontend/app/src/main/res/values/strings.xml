@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">FirstTest</string>
+    <string name="demo_1">Demo 1</string>
+    <string name="sign_in">Sign In</string>
+    <string name="sign_out">Sign Out</string>
+    <string name="create_an_account">Create an Account</string>
+    <string name="create_account">Create Account</string>
+    <string name="username">Username</string>
+    <string name="first_name">First Name</string>
+    <string name="last_name">Last Name</string>
+    <string name="email">Email</string>
+    <string name="university_id">University ID</string>
+    <string name="password">Password</string>
+    <string name="project_name">ISU Groups</string>
+    <string name="settings">Settings</string>
+    <string name="end_of_array">End of Array</string>
+</resources>

@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ChatRoomsPage">
+
+    <TextView
+        android:id="@+id/chat_room_header"
+        android:layout_width="418dp"
+        android:layout_height="70dp"
+        android:background="@drawable/maroon_header_box"
+        android:fontFamily="@font/roboto_bold"
+        android:gravity="center"
+        android:paddingLeft="65dp"
+        android:paddingRight="65dp"
+        android:text="PlaceHolder"
+        android:textAlignment="center"
+        android:textColor="@color/gold"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.571"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/back_button"
+        android:layout_width="45dp"
+        android:layout_height="45dp"
+        android:background="@drawable/back_arrow_vector"
+        android:text=""
+        app:layout_constraintBottom_toBottomOf="@+id/chat_room_header"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.043"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/chat_room_header"
+        app:layout_constraintVertical_bias="0.64" />
+
+    <TextView
+        android:id="@+id/announcement_create"
+        android:layout_width="45dp"
+        android:layout_height="45dp"
+        android:background="@drawable/add_groups_vector"
+        android:text=""
+        app:layout_constraintBottom_toBottomOf="@+id/chat_room_header"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.956"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/chat_room_header"
+        app:layout_constraintVertical_bias="0.64" />
+
+    <TextView
+        android:id="@+id/white_background"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:background="@drawable/white_box"
+        app:layout_constraintBottom_toBottomOf="parent"
+        tools:layout_editor_absoluteX="16dp" />
+
+    <EditText
+        android:id="@+id/create_chat"
+        android:layout_width="293dp"
+        android:layout_height="52dp"
+        android:ems="10"
+        android:hint="Message"
+        android:inputType="textPersonName"
+        android:text=""
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.279"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/chat_room_header"
+        app:layout_constraintVertical_bias="0.976" />
+
+    <TextView
+        android:id="@+id/submit_chat"
+        android:layout_width="45dp"
+        android:layout_height="45dp"
+        android:background="@drawable/submit_chat_false_vector"
+        android:enabled="false"
+        app:layout_constraintBottom_toBottomOf="@+id/create_chat"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/create_chat"
+        app:layout_constraintTop_toTopOf="@+id/create_chat" />
+
+    <ScrollView
+        android:id="@+id/chat_scroll"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="150dp"
+        app:layout_constraintTop_toBottomOf="@+id/chat_room_header">
+
+        <LinearLayout
+            android:id="@+id/all_messages"
+            android:layout_width="match_parent"
+            android:layout_height="590dp"
+            android:orientation="vertical"
+            app:layout_constraintTop_toBottomOf="@+id/chat_room_header">
+
+            <TextView
+                android:id="@+id/chat_example_right"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="100dp"
+                android:layout_marginRight="5dp"
+                android:layout_marginBottom="5dp"
+                android:layout_gravity="right"
+                android:background="@drawable/gold_box"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:text=""
+                android:textSize="16dp"
+                android:visibility="invisible"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/chat_room_header"
+                app:layout_constraintVertical_bias="0.042" />
+
+        </LinearLayout>
+    </ScrollView>
+
+    <TextView
+        android:id="@+id/chat_example_left"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="100dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginBottom="5dp"
+        android:background="@drawable/gold_box"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:text=""
+        android:textSize="16dp"
+        android:visibility="invisible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/chat_room_header"
+        app:layout_constraintVertical_bias="0.042" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

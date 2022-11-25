@@ -1,0 +1,75 @@
+stages:
+  - mavenbuild
+  - maventest
+  - mavendeploy
+  - androidbuild
+  - androidtest
+
+maven-build:
+  variables:
+    JAVA_HOME: "/usr/lib/jvm/jre-11-openjdk/"
+  stage: mavenbuild
+  tags:
+    - springboot
+  script:
+    - cd Backend
+    - mvn package -B
+
+maven-test:
+  variables:
+    JAVA_HOME: "/usr/lib/jvm/jre-11-openjdk/"
+  stage: maventest
+  tags:
+    - springboot
+  script:
+    - cd Backend
+    - mvn test
+  artifacts:
+    paths:
+      - Backend/target/*.jar
+
+
+maven-deploy:
+  rules:
+    - if: '$CI_COMMIT_BRANCH == "main"'
+  variables:
+    JAVA_HOME: "/usr/lib/jvm/jre-11-openjdk/"
+  stage: mavendeploy  #do make a stage with same name!
+  tags:
+   - springboot
+  script:
+    - cd Backend
+    - mvn package
+    - sudo mv target/*.jar /target/web-demo.jar 
+    - sudo systemctl stop system-web-demo
+    - sudo systemctl start system-web-demo
+
+android-build:
+  rules:
+    - if: '$CI_COMMIT_BRANCH == "main"'
+  image: gjandres/android-ci:latest
+  stage: androidbuild
+  before_script:
+    - export GRADLE_USER_HOME=`pwd`/.gradle
+    - chmod +x ./Frontend/gradlew
+  tags:
+   - android studio
+  script:
+    - cd Frontend
+    - ./gradlew build
+  artifacts:
+    paths:
+    - Frontend/app/build/outputs/
+
+android-test:
+  image: gjandres/android-ci:latest
+  stage: androidtest
+  before_script:
+    - export GRADLE_USER_HOME=`pwd`/.gradle
+    - chmod +x ./Frontend/gradlew
+  tags:
+   - android studio
+  script:
+    - cd Frontend
+    - ./gradlew test
+
